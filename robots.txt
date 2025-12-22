@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://the-coding-corner-100.github.io/THE-CODING-CORNER/sitemap.xml
