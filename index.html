@@ -26,7 +26,15 @@
 <meta name="twitter:title" content="The Coding Corner">
 <meta name="twitter:description" content="Coding tutorials, Scratch projects, and game development made simple.">
 <meta name="twitter:image" content="https://the-coding-corner-100.github.io/THE-CODING-CORNER/WATERMARK.png">
-
+ <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Coding Corner",
+      "url": "https://the-coding-corner-100.github.io/THE-CODING-CORNER/",
+      "description": "Coding tutorials, Scratch projects, and game development guides for beginners and advanced learners."
+    }
+ </script>
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
@@ -43,6 +51,15 @@
             }
             
             h1 {
+                text-align: center;
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: normal;
+                color: rgb(255, 145, 0);
+                font-size: 2rem;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+             h2 {
                 text-align: center;
                 font-family: "Source Sans Pro", sans-serif;
                 font-weight: normal;
@@ -520,7 +537,7 @@
 
     <body>
         <header>
-            <img src="WATERMARK.png" id="img" width="400">
+           <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo" loading="lazy">
             <div class="nav-links">
                 <a href="index.html"><p id="sub" style="font-size: 30px;"><b>Home</b></p></a>
                 <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub" style="font-size: 30px;"><b>Tutorials</b></p></a>
@@ -532,19 +549,19 @@
         <h1><b>Welcome to The Coding Corner</b></h1>
         
         <div class="image-container">
-            <img src="TCCOFICIAL_1_.gif" id="gif">
+            <img src="TCCOFICIAL_1_.gif" id="gif" alt="The Coding Corner animation" loading="lazy">
         </div>
         
-        <h1><b>What we have:</b></h1>
+        <h2><b>What we have:</b></h2>
         
         <div class="image-container">
-            <img src="BA.png" width="1000">
+            <img src="BA.png" width="1000" alt="Coding tutorials and Scratch projects" loading="lazy">
         </div>
         
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
         
-        <h1><b>So What Are You Waiting For:</b></h1>
+        <h2><b>So What Are You Waiting For:</b></h2>
         
         <div class="button-container">
             <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank">
@@ -557,22 +574,22 @@
         <br>
         
         <div class="rounded-rectangle">
-            <h1><b>Our Mission</b></h1>
+            <h2><b>Our Mission</b></h2>
             <p><b>To provide tutorials and turn your gaming skill into something valuable: coding!</b></p>
             <p><b>We aim to inspire creativity and problem-solving by bridging the gap between play and productivity. Whether you're just starting out or looking to advance your skills, our step-by-step guides, challenges, and community projects will support you every step of the way.</b></p>
             <p><b>From modding games to building your own, our mission is to empower the next generation of developers through fun, practical, and engaging content.</b></p>
 
-            <h1><b>What We Offer</b></h1>
+            <h2><b>What We Offer</b></h2>
             <ul>
               <li><b>Beginner to Advanced Coding Tutorials</b></li>
               <li><b>Development Guides</b></li>
               <li><b>Creative Challenges and Projects</b></li>
             </ul>
 
-            <h1><b>Why Choose Us?</b></h1>
+            <h2><b>Why Choose Us?</b></h2>
             <p><b>We simplify complex coding concepts and make learning feel like play. With hands-on examples, visual aids, and a passion for gaming, we help you grow fast and stay motivated.</b></p>
 
-            <h1><b>Join the Movement</b></h1>
+            <h2><b>Join the Movement</b></h2>
             <p><b>Whether you're here to learn, share, or create—you're part of something big. Dive in and let's turn your passion into power!</b></p>
         </div>
         
@@ -588,7 +605,7 @@
         
         <br>
         
-        <h1><b>Latest Video from THE CODING CORNER</b></h1>
+        <h2><b>Latest Video from THE CODING CORNER</b></h2>
         
         <div id="videoContainer">
             Loading latest video...
@@ -620,8 +637,9 @@
         <br>
         
         <footer>
-            <h1 id="sub"><b>Subscribe</b></h1>
+            <h3 id="sub"><b>Subscribe</b></h3>
         </footer>
     </body>
 
 </html>
+
