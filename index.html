@@ -533,19 +533,69 @@
                     min-width: 120px;
                 }
             }
+            /* Hamburger icon */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+}
+
+/* Mobile menu behavior */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f21;
+        width: 100%;
+        border-radius: 20px;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        font-size: 22px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
         </style>
+        <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+       </script>
+
     </head>
 
     <body>
-        <header>
-           <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo" loading="lazy">
-            <div class="nav-links">
-                <a href="index.html"><p id="sub" style="font-size: 30px;"><b>Home</b></p></a>
-                <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub" style="font-size: 30px;"><b>Tutorials</b></p></a>
-                <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><p id="sub" style="font-size: 30px;"><b>Scratch Account</b></p></a>
-                <a href="https://the-coding-corner-100.github.io/THE-CODING-CORNER/aboutus"><p id="sub" style="font-size: 30px;"><b>About Us</b></p></a>
-            </div>
-        </header>
+           <header>
+     <img src="WATERMARK.png" id="img" alt="The Coding Corner logo" loading="lazy">
+
+    <!-- Hamburger Icon -->
+     <div class="menu-toggle" id="menuToggle">
+        ☰
+     </div>
+
+    <!-- Navigation -->
+     <nav class="nav-links" id="navLinks">
+         <a href="index.html"><b>Home</b></a>
+         <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><b>Tutorials</b></a>
+         <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><b>Scratch Account</b></a>
+         <a href="https://the-coding-corner-100.github.io/THE-CODING-CORNER/aboutus"><b>About Us</b></a>
+     </nav>
+          </header>
         
         <br>
         <h1><b>Welcome to The Coding Corner</b></h1>
@@ -644,6 +694,7 @@
     </body>
 
 </html>
+
 
 
 
