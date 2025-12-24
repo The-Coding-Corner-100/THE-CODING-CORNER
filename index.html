@@ -74,6 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
     font-size:36px;
     cursor:pointer;
 }
+            @media (max-width: 768px) {
+    .menu-toggle {
+        display:block;
+    }
             * {
                 box-sizing: border-box;
             }
@@ -546,15 +550,18 @@ document.addEventListener("DOMContentLoaded", () => {
     </head>
 
     <body>
-        <header>
-           <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo" loading="lazy">
-            <div class="nav-links">
-                <a href="index.html"><p id="sub" style="font-size: 30px;"><b>Home</b></p></a>
-                <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub" style="font-size: 30px;"><b>Tutorials</b></p></a>
-                <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><p id="sub" style="font-size: 30px;"><b>Scratch Account</b></p></a>
-                <a href="https://the-coding-corner-100.github.io/THE-CODING-CORNER/aboutus"><p id="sub" style="font-size: 30px;"><b>About Us</b></p></a>
-            </div>
-        </header>
+       <header>
+    <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo">
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html"><p id="sub"><b>Home</b></p></a>
+        <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub"><b>Tutorials</b></p></a>
+        <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><p id="sub"><b>Scratch Account</b></p></a>
+        <a href="aboutus"><p id="sub"><b>About Us</b></p></a>
+    </div>
+</header>
         
         <br>
         <h1><b>Welcome to The Coding Corner</b></h1>
@@ -653,6 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </body>
 
 </html>
+
 
 
 
