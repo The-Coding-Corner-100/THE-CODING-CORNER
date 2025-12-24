@@ -50,6 +50,32 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
+            @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+            .nav-item {
+    font-size: 26px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
             /* NAV */
 .nav-links{
     display:flex;
@@ -120,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 border-radius: 100px;
                 padding: 10px 20px;
                 gap: 20px;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
             }
             
             footer {
@@ -556,12 +582,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="menu-toggle" id="menuToggle">☰</div>
 
-    <div class="nav-links" id="navLinks">
-        <a href="index.html"><p id="sub"><b>Home</b></p></a>
-        <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub"><b>Tutorials</b></p></a>
-        <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><p id="sub"><b>Scratch Account</b></p></a>
-        <a href="aboutus"><p id="sub"><b>About Us</b></p></a>
-    </div>
+           <div class="nav-links" id="navLinks">
+               <a href="index.html" class="nav-item">Home</a>
+               <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank" class="nav-item">Tutorials</a>
+               <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank" class="nav-item">Scratch Account</a>
+               <a href="aboutus" class="nav-item">About Us</a>
+           </div>
+
 </header>
         
         <br>
@@ -661,6 +688,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </body>
 
 </html>
+
 
 
 
