@@ -36,6 +36,17 @@
       "description": "Coding tutorials, Scratch projects, and game development guides for beginners and advanced learners."
     }
  </script>
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+});
+       </script>
+
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
@@ -506,33 +517,7 @@
             }
             
             /* Navigation improvements for mobile */
-            @media (max-width: 768px) {
-                header {
-                    position: sticky;
-                    top: 0;
-                    z-index: 1000;
-                    flex-direction: column;
-                    gap: 15px;
-                    height: auto;
-                    min-height: 100px;
-                    padding: 15px;
-                    border-radius: 50px;
-                }
-                
-                .nav-links {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 10px;
-                    width: 100%;
-                }
-                
-                .nav-links a {
-                    flex: 1;
-                    text-align: center;
-                    min-width: 120px;
-                }
-            }
+
         </style>
     </head>
 
@@ -644,6 +629,7 @@
     </body>
 
 </html>
+
 
 
 
