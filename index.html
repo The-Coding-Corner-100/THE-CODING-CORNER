@@ -50,6 +50,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
+            /* NAV */
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:26px;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.nav-links a:hover{
+    background:rgba(255,255,255,0.1);
+}
+
+/* HAMBURGER */
+.menu-toggle{
+    display:none;
+    font-size:36px;
+    cursor:pointer;
             * {
                 box-sizing: border-box;
             }
@@ -629,6 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </body>
 
 </html>
+
 
 
 
