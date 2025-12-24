@@ -50,12 +50,43 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
-            @media (max-width: 768px) {
+        /* NAV BASE */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 26px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        align-items: center;
+        gap: 15px;
     }
 
     .nav-links.show {
@@ -63,36 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 }
 
-            .nav-item {
-    font-size: 26px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.nav-item:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-            /* NAV */
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:26px;
-    padding:10px 15px;
-    border-radius:8px;
-}
-
-.nav-links a:hover{
-    background:rgba(255,255,255,0.1);
-}
 
 /* HAMBURGER */
 .menu-toggle{
@@ -458,10 +459,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     justify-content: center;
                 }
                 
-                #sub {
-                    font-size: 28px !important;
-                    padding: 10px 18px;
-                }
             }
             
             /* Mobile-specific styles */
@@ -484,11 +481,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 #img {
                     width: 250px;
-                }
-                
-                #sub {
-                    font-size: 24px !important;
-                    padding: 8px 12px;
                 }
                 
                 h1 {
@@ -542,9 +534,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     width: 200px;
                 }
                 
-                #sub {
-                    font-size: 20px !important;
-                }
                 
                 h1 {
                     font-size: 1.2rem;
@@ -583,10 +572,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="menu-toggle" id="menuToggle">☰</div>
 
            <div class="nav-links" id="navLinks">
-               <a href="index.html" class="nav-item">Home</a>
-               <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank" class="nav-item">Tutorials</a>
-               <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank" class="nav-item">Scratch Account</a>
-               <a href="aboutus" class="nav-item">About Us</a>
+               <a href="index.html" class="nav-item"><b>Home</b></a>
+               <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank" class="nav-item"><b>Tutorials</b></a>
+               <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank" class="nav-item"><b>Scratch Account</b></a>
+               <a href="aboutus" class="nav-item"><b>About Us</b></a>
            </div>
 
 </header>
@@ -688,6 +677,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </body>
 
 </html>
+
 
 
 
