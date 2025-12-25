@@ -36,9 +36,114 @@
       "description": "Coding tutorials, Scratch projects, and game development guides for beginners and advanced learners."
     }
  </script>
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        menuToggle.classList.toggle("active"); // adds animation
+    });
+});
+       </script>
+
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <style>
+            .menu-toggle {
+    display: none;
+    width: 36px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Show menu on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Transform hamburger into X when active */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+        /* NAV BASE */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 26px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+
+/* HAMBURGER */
+.menu-toggle{
+    display:none;
+    font-size:36px;
+    cursor:pointer;
+}
+            @media (max-width: 768px) {
+    .menu-toggle {
+        display:block;
+    }
+            }
             * {
                 box-sizing: border-box;
             }
@@ -80,7 +185,7 @@
                 border-radius: 100px;
                 padding: 10px 20px;
                 gap: 20px;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
             }
             
             footer {
@@ -392,16 +497,14 @@
                     justify-content: center;
                 }
                 
-                #sub {
-                    font-size: 28px !important;
-                    padding: 10px 18px;
-                }
             }
             
             /* Mobile-specific styles */
             @media (max-width: 768px) {
                 header {
-                    flex-direction: column;
+                    flex-direction: row;
+                    display: flex;
+                    justify-content: space-between;
                     gap: 15px;
                     height: auto;
                     min-height: 100px;
@@ -418,11 +521,6 @@
                 
                 #img {
                     width: 250px;
-                }
-                
-                #sub {
-                    font-size: 24px !important;
-                    padding: 8px 12px;
                 }
                 
                 h1 {
@@ -476,9 +574,6 @@
                     width: 200px;
                 }
                 
-                #sub {
-                    font-size: 20px !important;
-                }
                 
                 h1 {
                     font-size: 1.2rem;
@@ -506,46 +601,24 @@
             }
             
             /* Navigation improvements for mobile */
-            @media (max-width: 768px) {
-                header {
-                    position: sticky;
-                    top: 0;
-                    z-index: 1000;
-                    flex-direction: column;
-                    gap: 15px;
-                    height: auto;
-                    min-height: 100px;
-                    padding: 15px;
-                    border-radius: 50px;
-                }
-                
-                .nav-links {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 10px;
-                    width: 100%;
-                }
-                
-                .nav-links a {
-                    flex: 1;
-                    text-align: center;
-                    min-width: 120px;
-                }
-            }
+
         </style>
     </head>
 
     <body>
-        <header>
-           <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo" loading="lazy">
-            <div class="nav-links">
-                <a href="index.html"><p id="sub" style="font-size: 30px;"><b>Home</b></p></a>
-                <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank"><p id="sub" style="font-size: 30px;"><b>Tutorials</b></p></a>
-                <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank"><p id="sub" style="font-size: 30px;"><b>Scratch Account</b></p></a>
-                <a href="https://the-coding-corner-100.github.io/THE-CODING-CORNER/aboutus"><p id="sub" style="font-size: 30px;"><b>About Us</b></p></a>
-            </div>
-        </header>
+       <header>
+    <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo">
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+           <div class="nav-links" id="navLinks">
+               <span><a href="index.html" class="nav-item"><b>Home</b></a></span>
+               <span><a href="https://www.youtube.com/@THECODINGCONNER" target="_blank" class="nav-item"><b>Tutorials</b></a></span>
+               <span><a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank" class="nav-item"><b>Scratch Account</b></a></span>
+               <span><a href="aboutus" class="nav-item"><b>About Us</b></a></span>
+           </div>
+
+</header>
         
         <br>
         <h1><b>About Us</b></h1>
