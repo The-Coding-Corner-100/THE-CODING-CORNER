@@ -1,0 +1,634 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-site-verification" content="KKH2m4PaIfiV65t2r9caUbGIQSUcIIY_-MsMJf-aRw0" />
+        <title>The Coding Corner - 404</title>
+        <!-- SEO Meta -->
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="description" content="The Coding Corner offers beginner to advanced coding tutorials, Scratch projects, game development guides, and creative programming challenges. Learn coding the fun way.">
+<meta name="keywords" content="coding tutorials, Scratch coding, game development, programming for beginners, coding corner">
+<meta name="author" content="The Coding Corner">
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://the-coding-corner-100.github.io/THE-CODING-CORNER/">
+
+<!-- Open Graph (Google + Facebook) -->
+<meta property="og:title" content="The Coding Corner – Coding Tutorials & Scratch Projects">
+<meta property="og:description" content="Learn coding through games, Scratch tutorials, and creative programming projects.">
+<meta property="og:url" content="https://the-coding-corner-100.github.io/THE-CODING-CORNER/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://the-coding-corner-100.github.io/THE-CODING-CORNER/logo.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Coding Corner">
+<meta name="twitter:description" content="Coding tutorials, Scratch projects, and game development made simple.">
+<meta name="twitter:image" content="https://the-coding-corner-100.github.io/THE-CODING-CORNER/logo.png">
+ <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Coding Corner",
+      "url": "https://the-coding-corner-100.github.io/THE-CODING-CORNER/",
+      "description": "Coding tutorials, Scratch projects, and game development guides for beginners and advanced learners."
+    }
+ </script>
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        menuToggle.classList.toggle("active"); // adds animation
+    });
+});
+       </script>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .menu-toggle {
+    display: none;
+    width: 36px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Show menu on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Transform hamburger into X when active */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+        /* NAV BASE */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 26px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+
+/* HAMBURGER */
+.menu-toggle{
+    display:none;
+    font-size:36px;
+    cursor:pointer;
+}
+            @media (max-width: 768px) {
+    .menu-toggle {
+        display:block;
+    }
+            }
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                background-color: #1f1f21;
+                margin: 0;
+                padding: 0;
+                font-family: "Source Sans Pro", sans-serif;
+                color: white;
+            }
+            
+            h1 {
+                text-align: center;
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: normal;
+                color: rgb(255, 145, 0);
+                font-size: 2rem;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+             h2 {
+                text-align: center;
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: normal;
+                color: rgb(255, 145, 0);
+                font-size: 2rem;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+            
+            header {
+                background-image: url('BACKGROUND.png');
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center; 
+                border-radius: 100px;
+                padding: 10px 20px;
+                gap: 20px;
+                flex-wrap: nowrap;
+            }
+            
+            footer {
+                background-image: url('BACKGROUND.png');
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: center;     
+                align-items: center;         
+                border-radius: 100px;
+                margin-top: 40px;
+            }
+            
+            #head {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            #sub {
+                text-align: center;
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: normal;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                margin: 0;
+                padding: 10px 15px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+            }
+            
+            #sub:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            #gif {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            
+            #img {
+                max-width: 100%;
+                height: auto;
+                width: 300px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            
+            #button {
+                background-color: green;
+                font-size: 18px;
+                font-family: "Source Sans Pro", sans-serif;
+                color: white;
+                border: solid 2px black;
+                border-radius: 25px;
+                width: 100%;
+                max-width: 400px;
+                height: 60px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin: 10px auto;
+                display: block;
+            }
+            
+            #button:hover {
+                background-color: darkgreen;
+                transform: translateY(-2px);
+            }
+            
+            .button-container {
+                text-align: center;
+                background-color: blue;
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .rounded-rectangle {
+                width: 95%;
+                max-width: 1000px;
+                background-color: white;
+                border-radius: 16px;
+                color: black;
+                padding: 1.5rem;
+                font-family: "Source Sans Pro", sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                gap: 0.5rem;
+                margin: 20px auto;
+            }
+            
+            .rounded-rectangle h1 {
+                color: black;
+                font-size: 1.5rem;
+                margin: 15px 0;
+            }
+            
+            .rounded-rectangle p {
+                text-align: center;
+                line-height: 1.6;
+                margin: 10px 0;
+            }
+            
+            .rounded-rectangle ul {
+                text-align: left;
+                width: 100%;
+                max-width: 600px;
+            }
+            
+            .rounded-rectangle li {
+                margin: 8px 0;
+                line-height: 1.5;
+            }
+            
+            #gif {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .image-container {
+                text-align: center;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            
+            #videoContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 300px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            
+            #videoContainer iframe {
+                width: 100%;
+                max-width: 560px;
+                height: 315px;
+                border-radius: 10px;
+            }
+            
+            footer {
+                text-align: center;
+                padding: 30px 20px;
+                background-color: #2a2a2c;
+                border-top: 3px solid #4a4a4c;
+                margin-top: 40px;
+            }
+            
+            footer h1 {
+                color: #00ff88;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+            
+            /* Desktop/Laptop specific styles */
+            @media (min-width: 1024px) {
+                header {
+                    padding: 20px 40px;
+                    height: 120px;
+                    border-radius: 100px;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                }
+                
+                footer {
+                    height: 120px;
+                    border-radius: 100px;
+                    padding: 30px;
+                }
+                
+                #img {
+                    width: 400px;
+                }
+                
+                h1 {
+                    font-size: 2.5rem;
+                    margin: 30px 0;
+                }
+                
+                .rounded-rectangle {
+                    width: 85%;
+                    max-width: 1200px;
+                    padding: 2rem;
+                }
+                
+                .rounded-rectangle h1 {
+                    font-size: 1.8rem;
+                    color: black;
+                }
+                
+                #button {
+                    font-size: 24px;
+                    height: 80px;
+                    max-width: 600px;
+                }
+                
+                .button-container {
+                    padding: 30px;
+                }
+                
+                #videoContainer {
+                    min-height: 400px;
+                    padding: 30px;
+                }
+                
+                #videoContainer iframe {
+                    width: 800px;
+                    height: 450px;
+                }
+                
+                .nav-links {
+                    display: flex;
+                    gap: 30px;
+                    align-items: center;
+                }
+                
+                .nav-links a {
+                    min-width: auto;
+                    flex: none;
+                }
+                
+                #sub {
+                    font-size: 30px !important;
+                    padding: 12px 20px;
+                }
+            }
+            
+            /* Tablet specific styles */
+            @media (min-width: 769px) and (max-width: 1023px) {
+                header {
+                    padding: 15px 30px;
+                    height: 110px;
+                    border-radius: 80px;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+                
+                footer {
+                    height: 110px;
+                    border-radius: 80px;
+                    padding: 25px;
+                }
+                
+                #img {
+                    width: 350px;
+                }
+                
+                h1 {
+                    font-size: 2.2rem;
+                    margin: 25px 0;
+                }
+                
+                .rounded-rectangle {
+                    width: 90%;
+                    max-width: 900px;
+                    padding: 1.8rem;
+                }
+                
+                .rounded-rectangle h1 {
+                    font-size: 1.6rem;
+                    color: black;
+                }
+                
+                #button {
+                    font-size: 20px;
+                    height: 70px;
+                    max-width: 500px;
+                }
+                
+                .button-container {
+                    padding: 25px;
+                }
+                
+                #videoContainer {
+                    min-height: 350px;
+                    padding: 25px;
+                }
+                
+                #videoContainer iframe {
+                    width: 700px;
+                    height: 394px;
+                }
+                
+                .nav-links {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                
+            }
+            
+            /* Mobile-specific styles */
+            @media (max-width: 768px) {
+                header {
+                    flex-direction: row;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 15px;
+                    height: auto;
+                    min-height: 100px;
+                    padding: 15px;
+                    border-radius: 50px;
+                }
+                
+                footer {
+                    height: auto;
+                    min-height: 100px;
+                    padding: 20px;
+                    border-radius: 50px;
+                }
+                
+                #img {
+                    width: 250px;
+                }
+                
+                h1 {
+                    font-size: 1.5rem;
+                    padding: 0 15px;
+                }
+                
+                .rounded-rectangle h1 {
+                    font-size: 1.3rem;
+                    color: black;
+                }
+                
+                #button {
+                    font-size: 16px;
+                    height: 50px;
+                    max-width: 300px;
+                }
+                
+                .button-container {
+                    padding: 15px;
+                }
+                
+                .rounded-rectangle {
+                    width: 90%;
+                    padding: 1rem;
+                }
+                
+                #videoContainer {
+                    min-height: 200px;
+                    padding: 10px;
+                }
+                
+                #videoContainer iframe {
+                    height: 200px;
+                }
+            }
+            
+            /* Very small mobile screens */
+            @media (max-width: 480px) {
+                header {
+                    border-radius: 30px;
+                    padding: 10px;
+                }
+                
+                footer {
+                    border-radius: 30px;
+                    padding: 15px;
+                }
+                
+                #img {
+                    width: 200px;
+                }
+                
+                
+                h1 {
+                    font-size: 1.2rem;
+                }
+                
+                .rounded-rectangle h1 {
+                    font-size: 1.1rem;
+                    color: black;
+                }
+                
+                #button {
+                    font-size: 14px;
+                    height: 45px;
+                    max-width: 250px;
+                }
+                
+                .rounded-rectangle {
+                    width: 95%;
+                    padding: 0.8rem;
+                }
+                
+                #videoContainer iframe {
+                    height: 180px;
+                }
+            }
+            
+            /* Navigation improvements for mobile */
+
+        </style>
+    </head>
+
+    <body>
+       <header>
+    <img src="WATERMARK.png" id="img" width="400" alt="The Coding Corner logo">
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+           <div class="nav-links" id="navLinks">
+               <span><a href="index.html" class="nav-item"><b>Home</b></a></span>
+               <span><a href="https://www.youtube.com/@THECODINGCONNER" target="_blank" class="nav-item"><b>Tutorials</b></a></span>
+               <span><a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank" class="nav-item"><b>Scratch Account</b></a></span>
+               <span><a href="aboutus" class="nav-item"><b>About Us</b></a></span>
+           </div>
+
+</header>
+        
+        <br>
+        <h1><b>ERROR - 404</b></h1>
+        <h2><b>PAGE NOT FOUND</b></h2>
+        <br>
+        
+        <footer>
+            <h3 id="sub"><b>Subscribe</b></h3>
+        </footer>
+    </body>
+
+</html>
