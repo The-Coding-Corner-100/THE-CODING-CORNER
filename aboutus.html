@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="logo.png">
 
 <meta name="description" content="The Coding Corner offers beginner to advanced coding tutorials, Scratch projects, game development guides, and creative programming challenges.">
-<meta name="keywords" content="coding tutorials, Scratch, game development, programming">
+<meta name="keywords" content="coding tutorials, Scratch coding, game development, programming">
 <meta name="author" content="The Coding Corner">
 <meta name="robots" content="index, follow">
 
@@ -23,27 +23,26 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
 body {
     background-color: #1f1f21;
     font-family: "Source Sans Pro", sans-serif;
     color: white;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* ---------- HEADER ---------- */
 header {
     background-image: url('BACKGROUND.png');
     width: 100%;
-    min-height: 100px;
-    padding: 15px 25px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 100px;
+    padding: 10px 20px;
 }
 
 #img {
@@ -53,25 +52,24 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    align-items: center;
 }
 
 .nav-item {
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
+    font-size: 26px;
     padding: 10px 15px;
     border-radius: 8px;
+    color: white;
+    text-decoration: none;
 }
 
 .nav-item:hover {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
 }
 
-/* ---------- MAIN ---------- */
 main {
     flex: 1;
-    padding: 20px;
 }
 
 h1, h2 {
@@ -80,11 +78,12 @@ h1, h2 {
 }
 
 .rounded-rectangle {
-    background: white;
-    color: black;
+    width: 95%;
+    max-width: 1000px;
+    background-color: white;
     border-radius: 16px;
+    color: black;
     padding: 1.5rem;
-    max-width: 900px;
     margin: 20px auto;
     text-align: center;
 }
@@ -95,74 +94,68 @@ h1, h2 {
     margin: auto;
 }
 
-/* ---------- BUTTON ---------- */
 .button-container {
     text-align: center;
-    margin: 30px 0;
+    background-color: blue;
+    padding: 20px;
+    margin: 20px 0;
 }
 
 #button {
-    background: green;
-    color: white;
+    background-color: green;
     font-size: 18px;
-    border: none;
+    color: white;
     border-radius: 25px;
-    padding: 15px 30px;
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-#button:hover {
-    background: darkgreen;
-}
-
-/* ---------- VIDEO (CENTERED) ---------- */
-.video-wrapper {
+.video-center {
     display: flex;
     justify-content: center;
     margin: 30px 0;
 }
 
-video {
-    width: 100%;
+.video-center video {
+    width: 50%;
     max-width: 700px;
     border-radius: 12px;
 }
 
-/* ---------- FOOTER ---------- */
 footer {
     background-image: url('BACKGROUND.png');
-    background-size: cover;
-    background-position: center;
-
+    width: 100%;
     min-height: 100px;
-    margin: 30px;
-    border-radius: 100px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 100px;
+    margin-top: 40px;
+    position: static;
 }
 
 footer h3 {
     color: rgb(255, 145, 0);
     font-size: 1.6rem;
-    margin: 0;
 }
 
-/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 15px;
+        height: auto;
         border-radius: 50px;
+        gap: 15px;
     }
 
     footer {
         border-radius: 50px;
     }
 
-    #img {
-        width: 220px;
+    .video-center video {
+        width: 90%;
     }
 }
 </style>
@@ -186,44 +179,41 @@ footer h3 {
 <h1>About Us</h1>
 
 <div class="rounded-rectangle">
-    <p>
-        Welcome to <strong>THE CODING CORNER</strong>!  
-        We make coding simple, fun, and practical for everyone.
-    </p>
+<p>
+Welcome to <strong>THE CODING CORNER</strong>!  
+We make coding simple, fun, and accessible for everyone.
+</p>
 
-    <p>
-        From Scratch and web development to real-world projects,
-        we help you grow from beginner to confident developer.
-    </p>
+<p>
+From Scratch to web development and real-world projects,
+we help you grow as a developer step by step.
+</p>
 
-    <h2>What We Do</h2>
-    <ul>
-        <li>📌 Programming Tutorials</li>
-        <li>📌 Scratch & Game Projects</li>
-        <li>📌 Developer Tips</li>
-        <li>📌 Learning by Building</li>
-    </ul>
+<h2>What We Do</h2>
+<ul>
+<li>Programming Tutorials</li>
+<li>Scratch & Game Projects</li>
+<li>Developer Tips</li>
+<li>Hands-on Learning</li>
+</ul>
 </div>
 
 <div class="button-container">
-    <a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank">
-        <button id="button">Visit My Scratch Account</button>
-    </a>
+<a href="https://scratch.mit.edu/users/THECODINGCORNER100/" target="_blank">
+<button id="button">Go To My Scratch Account</button>
+</a>
 </div>
 
-<h2>Learn More</h2>
+<h2>A video if you want to learn more</h2>
 
-<div class="video-wrapper">
-    <video controls>
-        <source src="Welcome To The Coding Corner.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<div class="video-center">
+<video src="Welcome To The Coding Corner.mp4" controls></video>
 </div>
 
 </main>
 
 <footer>
-    <h3>Subscribe</h3>
+<h3>Subscribe</h3>
 </footer>
 
 </body>
