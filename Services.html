@@ -606,38 +606,57 @@ document.addEventListener("DOMContentLoaded", () => {
         </style>
         <style>
 
-           .rainbow-btn {
+         .rainbow-animate {
+    position: relative;
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: white;
     padding: 12px 28px;
-    background: transparent;
-    border: 3px solid transparent;
-    border-radius: 10px;
+    background: #000;
+    border-radius: 12px;
+    border: none;
     cursor: pointer;
-
-    /* Rainbow outline */
-    background-image:
-        linear-gradient(#000, #000),
-        linear-gradient(
-            90deg,
-            red,
-            orange,
-            yellow,
-            lime,
-            cyan,
-            blue,
-            violet
-        );
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 0;
 }
 
-.rainbow-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+/* Animated outline */
+.rainbow-animate::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+/* Cut the center so it looks like an outline */
+.rainbow-animate::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #000;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
             
         </style>
@@ -660,8 +679,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <br>
         <h1><b>Our Services</b></h1>
-        <button class="rainbow-btn">Free Tutorials</button>
-        <button class="rainbow-btn">Various Games & Apps</button>
+        <button class="rainbow-animate">Free Tutorials</button>
+        <button class="rainbow-animate">Various Games & Apps</button>
 
         <br>
         
