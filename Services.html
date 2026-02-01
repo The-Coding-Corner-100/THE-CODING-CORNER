@@ -604,6 +604,43 @@ document.addEventListener("DOMContentLoaded", () => {
             /* Navigation improvements for mobile */
 
         </style>
+        <style>
+
+           .rainbow-btn {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 12px 28px;
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* Rainbow outline */
+    background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            violet
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rainbow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+            
+        </style>
     </head>
 
     <body>
@@ -623,8 +660,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <br>
         <h1><b>Our Services</b></h1>
-        <button>Free Tutorials</button>
-        <button>Various Games & Apps</button>
+        <button class="rainbow-btn">Free Tutorials</button>
+        <button class="rainbow-btn">Various Games & Apps</button>
 
         <br>
         
