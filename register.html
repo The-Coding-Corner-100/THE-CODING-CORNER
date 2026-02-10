@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="KKH2m4PaIfiV65t2r9caUbGIQSUcIIY_-MsMJf-aRw0" />
-        <title>The Coding Corner - Home</title>
+        <title>The Coding Corner - Register</title>
         <!-- SEO Meta -->
 <link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="The Coding Corner offers beginner to advanced coding tutorials, Scratch projects, game development guides, and creative programming challenges. Learn coding the fun way.">
@@ -621,9 +621,21 @@ document.addEventListener("DOMContentLoaded", () => {
            </div>
 
 </header>
-        
+        <h1><b>Join THECODINGCORNER TEAM</b></h1>
         <br>
-        <h1><b>Register</b></h1>
+          <div class="rounded-rectangle">
+            <h2><b>Discription</b></h2>
+            <p><b>This is the team for development of games in THECODINGCORNER. You can join as a music composer, sound effects and image creator or even as coder.</b></p>
+        </div>
+        <br>
+          <div class="button-container">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU2Iqk-kakh9duu_FjLoCee1Hv9KEqeM5BMn46cOODabwYZA/viewform?usp=dialog" target="_blank">
+                <button id="button">
+                    Register Now
+                </button>
+            </a>
+        </div>
+        <br>
         <div class="button-container">
             <a href="https://www.youtube.com/@THECODINGCONNER" target="_blank">
                 <button id="button">
@@ -642,37 +654,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
         </div>
         
-        <br>
-        
-        <h2><b>Latest Video from THE CODING CORNER</b></h2>
-        
-        <div id="videoContainer">
-            Loading latest video...
-        </div>
-
-        <script>
-            const channelId = 'UC53Ctgs83plQrBWFzLlpreA';
-            const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const videoId = data.items[0].guid.split(':')[2];
-                    const embed = `
-                        <iframe width="560" height="315" 
-                            src="https://www.youtube.com/embed/${videoId}" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>`;
-                    document.getElementById('videoContainer').innerHTML = embed;
-                })
-                .catch(err => {
-                    console.error('Failed to fetch video:', err);
-                    document.getElementById('videoContainer').innerText = 'Failed to load video.';
-                });
-        </script>
-
+       
         <br>
         
         <footer>
