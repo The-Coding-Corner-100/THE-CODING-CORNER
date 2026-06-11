@@ -604,67 +604,6 @@ document.addEventListener("DOMContentLoaded", () => {
             /* Navigation improvements for mobile */
 
         </style>
-        <style>
-
-      .outline-btn {
-    position: relative;
-    padding: 12px 26px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: white;
-    background: #000;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    z-index: 0;
-    overflow: hidden;
-}
-
-/* Animated border */
-.outline-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 2px; /* outline thickness */
-    border-radius: inherit;
-
-    background: linear-gradient(
-        90deg,
-        red,
-        orange,
-        yellow,
-        lime,
-        cyan,
-        blue,
-        violet,
-        red
-    );
-
-    /* Mask to make it ONLY an outline */
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-
-    animation: border-move 3s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes border-move {
-    from { background-position: 0% 50%; }
-    to   { background-position: 300% 50%; }
-}
-            .services-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-    margin: 30px 0;
-}
-            
-            
-        </style>
     </head>
 
     <body>
@@ -683,7 +622,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </header>
         
         <br>
-        <h1>Projects</h1>
+        <h1><b>Projects</b></h1>
+        <br>
+        <button id="project"></button>
         <br>
          <h2><b>So What Are You Waiting For:</b></h2>
         
