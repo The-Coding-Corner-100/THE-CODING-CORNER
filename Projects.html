@@ -627,8 +627,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     color: white;
                     font-size: 18px;
                 }
+                #rainbow {
+                    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: shift-rainbow 4s linear infinite;
+                }
+                @keyframes shift-rainbow {
+               to {
+               background-position: 200% center;
+               }
+               }
+                
             
-            /* Navigation improvements for mobile */
+
 
         </style>
     </head>
@@ -653,6 +665,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <br>
         <button id="project" onclick="window.open('https://the-coding-corner-100.github.io/XO-WARS/', '_blank');"><img src="https://the-coding-corner-100.github.io/XO-WARS/Screenshot_2026-06-11_133732-removebg-preview.png"></button>
         <p><b>A TIC TAC TO GAME SUPPORTING ONLINE MODE WITH A TWIST</b></p>
+        <br>
+        <button id="project" onclick="window.open('https://scratch.mit.edu/projects/1308351929/', '_blank');"><h2 id="rainbow">Pattren Generator</h2></button>
+        <p><b>IT MAKE A PATTEREN BASED ON THE SEED</b></p>
         <br>
          <h2><b>So What Are You Waiting For:</b></h2>
         
